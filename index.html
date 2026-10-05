@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For My LOML ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #30152f, #0b0710 65%);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+      background-size: 90px 90px, 140px 140px;
+      background-position: 10px 20px, 50px 70px;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 550px;
+      padding: 45px 30px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 25px;
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      animation: appear 1.5s ease;
+    }
+
+    .heart {
+      font-size: 55px;
+      animation: heartbeat 1.5s infinite;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      color: #d8cbd8;
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    button {
+      border: none;
+      padding: 13px 28px;
+      border-radius: 30px;
+      background: white;
+      color: #24101f;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px rgba(255,255,255,0.4);
+    }
+
+    #message {
+      display: none;
+      margin-top: 30px;
+      color: #eee;
+      line-height: 1.8;
+      font-size: 16px;
+      animation: fade 1s ease;
+    }
+
+    .signature {
+      margin-top: 25px;
+      color: #c9a9c5;
+      font-style: italic;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="stars"></div>
+
+  <div class="card">
+
+    <div class="heart">❤️</div>
+
+    <h1>For My LOML</h1>
+
+    <p class="subtitle">
+      Maybe you'll never know how much you mean to me...
+      but this little page is a start.
+    </p>
+
+    <button onclick="revealMessage()">
+      Open My Heart
+    </button>
+
+    <div id="message">
+      <p>
+        You are more than just a person in my life.
+        Somehow, you became a part of my thoughts,
+        my memories, and the little moments that make
+        ordinary days feel different.
+      </p>
+
+      <p style="margin-top: 18px;">
+        I don't know what the future holds,
+        but if I could choose one person to keep
+        close through it all...
+        I'd choose you.
+      </p>
+
+      <div class="signature">
+        — Always, ❤️
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function revealMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
